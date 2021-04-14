@@ -2,7 +2,7 @@
     package="com.fikkyardianto.pengolahan_citra_digital">
    <application
        android:requestLegacyExternalStorage="true"
-       android:label="pengolahan_citra_digital"
+       android:label="Pengolahan Citra Digital"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
