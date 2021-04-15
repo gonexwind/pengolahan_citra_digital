@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -132,6 +133,18 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  Widget _button({String text, Function onPressed}) {
+    return Container(
+      width: double.infinity,
+      child: MaterialButton(
+        color: Colors.teal,
+        textColor: Colors.white,
+        child: Text(text),
+        onPressed: onPressed,
+      ),
+    );
+  }
+
   showAlertDialog(BuildContext context, String title, List<double> filter) {
     Widget okButton = MaterialButton(
       child: Text("OK"),
@@ -160,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildHeader(BuildContext context) {
     return Container(
       height: (MediaQuery.of(context).orientation == Orientation.landscape)
-          ? 100
+          ? 110
           : 120,
       width: double.infinity,
       decoration: BoxDecoration(
